@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+    {% include 'components/alert_banner.html' %}
+
+    <div class="space-y-8">
+        <div class="space-y-4">
+            <h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wider">Current Situation</h3>
+            {% include 'components/stats_grid.html' %}
+        </div>
+
+        <div class="space-y-4">
+             {% include 'components/forecast_panel.html' %}
+        </div>
+        
+        <div class="space-y-4">
+             {% include 'components/feature_impact.html' %}
+        </div>
+
+        <div class="space-y-4">
+            {% include 'components/details_panel.html' %}
+        </div>
+    </div>
+{% endblock %}
